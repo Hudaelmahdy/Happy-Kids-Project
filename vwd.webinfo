@@ -1,0 +1,73 @@
+﻿<?xml version="1.0"?>
+<!-- 
+  Visual Studio global web project settings.
+-->
+<VisualWebDeveloper>
+
+  <StartupServices>
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+ 0521e91aabd487b3e66b808bb8c2f07ba1ca9a0c
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+    
+  
+<<<<<<< HEAD
+<<<<<<< HEAD
+    
+  
+=======
+>>>>>>> b39794517ff6518a10050edac42015e520cc3c5e
+=======
+=======
+=======
+>>>>>>> Huda
+>>>>>>> 0521e91aabd487b3e66b808bb8c2f07ba1ca9a0c
+>>>>>>> master
+    <Service ID="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}"/>
+  </StartupServices>
+</VisualWebDeveloper>

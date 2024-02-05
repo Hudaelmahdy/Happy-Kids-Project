@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="U_ID" />
+          </Key>
+          <Property Name="U_ID" Type="int" Nullable="false" />
+          <Property Name="U_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_Pass" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pos_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Appointment">
+          <Key>
+            <PropertyRef Name="App_ID" />
+          </Key>
+          <Property Name="App_ID" Type="int" Nullable="false" />
+          <Property Name="App_Date" Type="date" Nullable="false" />
+          <Property Name="App_Time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="K_ID" Type="int" Nullable="false" />
+          <Property Name="D_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Art_ID" />
+          </Key>
+          <Property Name="Art_ID" Type="int" Nullable="false" />
+          <Property Name="text" Type="text" Nullable="false" />
+          <Property Name="Co_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="Co_ID" />
+          </Key>
+          <Property Name="Co_ID" Type="int" Nullable="false" />
+          <Property Name="Co_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Co_description" Type="text" Nullable="false" />
+          <Property Name="Vid_ID" Type="int" Nullable="false" />
+          <Property Name="Art_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="D_ID" />
+          </Key>
+          <Property Name="D_ID" Type="int" Nullable="false" />
+          <Property Name="D_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_national_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_Specialization" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_Pass" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="D_Experiences" Type="nvarchar" MaxLength="200" />
+          <Property Name="D_working_hours" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kids">
+          <Key>
+            <PropertyRef Name="K_ID" />
+          </Key>
+          <Property Name="K_ID" Type="int" Nullable="false" />
+          <Property Name="K_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="K_Gender" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="K_Address" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="K_DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Medical_Conditions" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Medecations" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Chief_Complaint" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="Pos_Id" />
+          </Key>
+          <Property Name="Pos_Id" Type="int" Nullable="false" />
+          <Property Name="text" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="Prescriptions">
+          <Key>
+            <PropertyRef Name="Pre_Id" />
+          </Key>
+          <Property Name="Pre_Id" Type="int" Nullable="false" />
+          <Property Name="Pre_date" Type="date" Nullable="false" />
+          <Property Name="Pre_medical_diagnosis" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="Pre_pharmaceutical" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Pre_description" Type="nvarchar" MaxLength="500" />
+          <Property Name="D_ID" Type="int" Nullable="false" />
+          <Property Name="K_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sessions">
+          <Key>
+            <PropertyRef Name="Se_ID" />
+          </Key>
+          <Property Name="Se_ID" Type="int" Nullable="false" />
+          <Property Name="Se_date" Type="date" Nullable="false" />
+          <Property Name="Se_medical_diagnosis" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="D_ID" Type="int" Nullable="false" />
+          <Property Name="K_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="U_ID" />
+          </Key>
+          <Property Name="U_ID" Type="int" Nullable="false" />
+          <Property Name="U_Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_Gender" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="U_Pass" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pos_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Videos">
+          <Key>
+            <PropertyRef Name="Vid_ID" />
+          </Key>
+          <Property Name="Vid_ID" Type="int" Nullable="false" />
+          <Property Name="Vid_URL" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Vid_Description" Type="text" />
+          <Property Name="Co_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Accounts_ToTable">
+          <End Role="Posts" Type="Self.Posts" Multiplicity="1" />
+          <End Role="users" Type="Self.users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="Pos_Id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="Pos_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointment_ToTable">
+          <End Role="Kids" Type="Self.Kids" Multiplicity="1" />
+          <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kids">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="Appointment">
+              <PropertyRef Name="K_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointment_ToTable_1">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="1" />
+          <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="D_ID" />
+            </Principal>
+            <Dependent Role="Appointment">
+              <PropertyRef Name="D_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_ToTable">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="Co_ID" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="Co_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Courses_ToTable">
+          <End Role="Videos" Type="Self.Videos" Multiplicity="1" />
+          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Videos">
+              <PropertyRef Name="Vid_ID" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="Vid_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Courses_ToTable_1">
+          <End Role="Article" Type="Self.Article" Multiplicity="1" />
+          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Art_ID" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="Art_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kids_ToTable">
+          <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
+          <End Role="Kids" Type="Self.Kids" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounts">
+              <PropertyRef Name="U_ID" />
+            </Principal>
+            <Dependent Role="Kids">
+              <PropertyRef Name="U_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prescriptions_ToTable">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="1" />
+          <End Role="Prescriptions" Type="Self.Prescriptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="D_ID" />
+            </Principal>
+            <Dependent Role="Prescriptions">
+              <PropertyRef Name="D_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prescriptions_ToTable_1">
+          <End Role="Kids" Type="Self.Kids" Multiplicity="1" />
+          <End Role="Prescriptions" Type="Self.Prescriptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kids">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="Prescriptions">
+              <PropertyRef Name="K_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_ToTable">
+          <End Role="Doctor" Type="Self.Doctor" Multiplicity="1" />
+          <End Role="Sessions" Type="Self.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="D_ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="D_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_ToTable_1">
+          <End Role="Kids" Type="Self.Kids" Multiplicity="1" />
+          <End Role="Sessions" Type="Self.Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kids">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="K_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videos_ToTable">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+          <End Role="Videos" Type="Self.Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="Co_ID" />
+            </Principal>
+            <Dependent Role="Videos">
+              <PropertyRef Name="Co_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseModelStoreContainer">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Appointment" EntityType="Self.Appointment" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Article" EntityType="Self.Article" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Courses" EntityType="Self.Courses" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Doctor" EntityType="Self.Doctor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kids" EntityType="Self.Kids" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Posts" EntityType="Self.Posts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Prescriptions" EntityType="Self.Prescriptions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sessions" EntityType="Self.Sessions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Videos" EntityType="Self.Videos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Accounts_ToTable" Association="Self.FK_Accounts_ToTable">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointment_ToTable" Association="Self.FK_Appointment_ToTable">
+            <End Role="Kids" EntitySet="Kids" />
+            <End Role="Appointment" EntitySet="Appointment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointment_ToTable_1" Association="Self.FK_Appointment_ToTable_1">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Appointment" EntitySet="Appointment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_ToTable" Association="Self.FK_Article_ToTable">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Courses_ToTable" Association="Self.FK_Courses_ToTable">
+            <End Role="Videos" EntitySet="Videos" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Courses_ToTable_1" Association="Self.FK_Courses_ToTable_1">
+            <End Role="Article" EntitySet="Article" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kids_ToTable" Association="Self.FK_Kids_ToTable">
+            <End Role="Accounts" EntitySet="Accounts" />
+            <End Role="Kids" EntitySet="Kids" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prescriptions_ToTable" Association="Self.FK_Prescriptions_ToTable">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Prescriptions" EntitySet="Prescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prescriptions_ToTable_1" Association="Self.FK_Prescriptions_ToTable_1">
+            <End Role="Kids" EntitySet="Kids" />
+            <End Role="Prescriptions" EntitySet="Prescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_ToTable" Association="Self.FK_Sessions_ToTable">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_ToTable_1" Association="Self.FK_Sessions_ToTable_1">
+            <End Role="Kids" EntitySet="Kids" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videos_ToTable" Association="Self.FK_Videos_ToTable">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Videos" EntitySet="Videos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Accounts">
+          <Key>
+            <PropertyRef Name="U_ID" />
+          </Key>
+          <Property Name="U_ID" Type="Int32" Nullable="false" />
+          <Property Name="U_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pos_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Posts" Relationship="Self.FK_Accounts_ToTable" FromRole="Accounts" ToRole="Posts" />
+          <NavigationProperty Name="Kids" Relationship="Self.FK_Kids_ToTable" FromRole="Accounts" ToRole="Kids" />
+        </EntityType>
+        <EntityType Name="Appointment">
+          <Key>
+            <PropertyRef Name="App_ID" />
+          </Key>
+          <Property Name="App_ID" Type="Int32" Nullable="false" />
+          <Property Name="App_Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="App_Time" Type="Time" Nullable="false" Precision="7" />
+          <Property Name="K_ID" Type="Int32" Nullable="false" />
+          <Property Name="D_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Kids1" Relationship="DatabaseModel.FK_Appointment_ToTable" FromRole="Appointment" ToRole="Kids" />
+          <NavigationProperty Name="Doctor1" Relationship="DatabaseModel.FK_Appointment_ToTable_1" FromRole="Appointment" ToRole="Doctor" />
+        </EntityType>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="Art_ID" />
+          </Key>
+          <Property Name="Art_ID" Type="Int32" Nullable="false" />
+          <Property Name="text" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Co_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_Article_ToTable" FromRole="Article" ToRole="Courses" />
+          <NavigationProperty Name="Courses1" Relationship="Self.FK_Courses_ToTable_1" FromRole="Article" ToRole="Courses" />
+        </EntityType>
+        <EntityType Name="Courses">
+          <Key>
+            <PropertyRef Name="Co_ID" />
+          </Key>
+          <Property Name="Co_ID" Type="Int32" Nullable="false" />
+          <Property Name="Co_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Co_description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Vid_ID" Type="Int32" Nullable="false" />
+          <Property Name="Art_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Article" Relationship="Self.FK_Article_ToTable" FromRole="Courses" ToRole="Article" />
+          <NavigationProperty Name="Article1" Relationship="Self.FK_Courses_ToTable_1" FromRole="Courses" ToRole="Article" />
+          <NavigationProperty Name="Videos" Relationship="Self.FK_Courses_ToTable" FromRole="Courses" ToRole="Videos" />
+          <NavigationProperty Name="Videos1" Relationship="Self.FK_Videos_ToTable" FromRole="Courses" ToRole="Videos" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="D_ID" />
+          </Key>
+          <Property Name="D_ID" Type="Int32" Nullable="false" />
+          <Property Name="D_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_national_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_Specialization" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_Experiences" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="D_working_hours" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Appointment1" Relationship="DatabaseModel.FK_Appointment_ToTable_1" FromRole="Doctor" ToRole="Appointment" />
+          <NavigationProperty Name="Prescriptions1" Relationship="DatabaseModel.FK_Prescriptions_ToTable" FromRole="Doctor" ToRole="Prescriptions" />
+          <NavigationProperty Name="Sessions1" Relationship="DatabaseModel.FK_Sessions_ToTable" FromRole="Doctor" ToRole="Sessions" />
+        </EntityType>
+        <EntityType Name="Kids">
+          <Key>
+            <PropertyRef Name="K_ID" />
+          </Key>
+          <Property Name="K_ID" Type="Int32" Nullable="false" />
+          <Property Name="K_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="K_Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="K_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="K_DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Medical_Conditions" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Medecations" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Chief_Complaint" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="U_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK_Kids_ToTable" FromRole="Kids" ToRole="Accounts" />
+          <NavigationProperty Name="Appointment1" Relationship="DatabaseModel.FK_Appointment_ToTable" FromRole="Kids" ToRole="Appointment" />
+          <NavigationProperty Name="Prescriptions1" Relationship="DatabaseModel.FK_Prescriptions_ToTable_1" FromRole="Kids" ToRole="Prescriptions" />
+          <NavigationProperty Name="Sessions1" Relationship="DatabaseModel.FK_Sessions_ToTable_1" FromRole="Kids" ToRole="Sessions" />
+        </EntityType>
+        <EntityType Name="Posts">
+          <Key>
+            <PropertyRef Name="Pos_Id" />
+          </Key>
+          <Property Name="Pos_Id" Type="Int32" Nullable="false" />
+          <Property Name="text" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Accounts" Relationship="Self.FK_Accounts_ToTable" FromRole="Posts" ToRole="Accounts" />
+          <NavigationProperty Name="users" Relationship="DatabaseModel.FK_Accounts_ToTable1" FromRole="Posts" ToRole="users" />
+        </EntityType>
+        <EntityType Name="Prescriptions">
+          <Key>
+            <PropertyRef Name="Pre_Id" />
+          </Key>
+          <Property Name="Pre_Id" Type="Int32" Nullable="false" />
+          <Property Name="Pre_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Pre_medical_diagnosis" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pre_pharmaceutical" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pre_description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="D_ID" Type="Int32" Nullable="false" />
+          <Property Name="K_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Doctor1" Relationship="DatabaseModel.FK_Prescriptions_ToTable" FromRole="Prescriptions" ToRole="Doctor" />
+          <NavigationProperty Name="Kids1" Relationship="DatabaseModel.FK_Prescriptions_ToTable_1" FromRole="Prescriptions" ToRole="Kids" />
+        </EntityType>
+        <EntityType Name="Sessions">
+          <Key>
+            <PropertyRef Name="Se_ID" />
+          </Key>
+          <Property Name="Se_ID" Type="Int32" Nullable="false" />
+          <Property Name="Se_date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Se_medical_diagnosis" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="D_ID" Type="Int32" Nullable="false" />
+          <Property Name="K_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Doctor1" Relationship="DatabaseModel.FK_Sessions_ToTable" FromRole="Sessions" ToRole="Doctor" />
+          <NavigationProperty Name="Kids1" Relationship="DatabaseModel.FK_Sessions_ToTable_1" FromRole="Sessions" ToRole="Kids" />
+        </EntityType>
+        <EntityType Name="Videos">
+          <Key>
+            <PropertyRef Name="Vid_ID" />
+          </Key>
+          <Property Name="Vid_ID" Type="Int32" Nullable="false" />
+          <Property Name="Vid_URL" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Vid_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="Co_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Courses" Relationship="Self.FK_Courses_ToTable" FromRole="Videos" ToRole="Courses" />
+          <NavigationProperty Name="Courses1" Relationship="Self.FK_Videos_ToTable" FromRole="Videos" ToRole="Courses" />
+        </EntityType>
+        <Association Name="FK_Accounts_ToTable">
+          <End Role="Posts" Type="Self.Posts" Multiplicity="1" />
+          <End Role="Accounts" Type="Self.Accounts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="Pos_Id" />
+            </Principal>
+            <Dependent Role="Accounts">
+              <PropertyRef Name="Pos_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Kids_ToTable">
+          <End Role="Accounts" Type="Self.Accounts" Multiplicity="1" />
+          <End Role="Kids" Type="Self.Kids" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Accounts">
+              <PropertyRef Name="U_ID" />
+            </Principal>
+            <Dependent Role="Kids">
+              <PropertyRef Name="U_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Article_ToTable">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+          <End Role="Article" Type="Self.Article" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="Co_ID" />
+            </Principal>
+            <Dependent Role="Article">
+              <PropertyRef Name="Co_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Courses_ToTable_1">
+          <End Role="Article" Type="Self.Article" Multiplicity="1" />
+          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Article">
+              <PropertyRef Name="Art_ID" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="Art_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Courses_ToTable">
+          <End Role="Videos" Type="Self.Videos" Multiplicity="1" />
+          <End Role="Courses" Type="Self.Courses" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Videos">
+              <PropertyRef Name="Vid_ID" />
+            </Principal>
+            <Dependent Role="Courses">
+              <PropertyRef Name="Vid_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Videos_ToTable">
+          <End Role="Courses" Type="Self.Courses" Multiplicity="1" />
+          <End Role="Videos" Type="Self.Videos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Courses">
+              <PropertyRef Name="Co_ID" />
+            </Principal>
+            <Dependent Role="Videos">
+              <PropertyRef Name="Co_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DatabaseEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Accounts" EntityType="Self.Accounts" />
+          <EntitySet Name="Appointment" EntityType="Self.Appointment" />
+          <EntitySet Name="Article" EntityType="Self.Article" />
+          <EntitySet Name="Courses" EntityType="Self.Courses" />
+          <EntitySet Name="Doctor" EntityType="Self.Doctor" />
+          <EntitySet Name="Kids" EntityType="Self.Kids" />
+          <EntitySet Name="Posts" EntityType="Self.Posts" />
+          <EntitySet Name="Prescriptions" EntityType="Self.Prescriptions" />
+          <EntitySet Name="Sessions" EntityType="Self.Sessions" />
+          <EntitySet Name="Videos" EntityType="Self.Videos" />
+          <AssociationSet Name="FK_Accounts_ToTable" Association="Self.FK_Accounts_ToTable">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="Accounts" EntitySet="Accounts" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Kids_ToTable" Association="Self.FK_Kids_ToTable">
+            <End Role="Accounts" EntitySet="Accounts" />
+            <End Role="Kids" EntitySet="Kids" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Article_ToTable" Association="Self.FK_Article_ToTable">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Article" EntitySet="Article" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Courses_ToTable_1" Association="Self.FK_Courses_ToTable_1">
+            <End Role="Article" EntitySet="Article" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Courses_ToTable" Association="Self.FK_Courses_ToTable">
+            <End Role="Videos" EntitySet="Videos" />
+            <End Role="Courses" EntitySet="Courses" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Videos_ToTable" Association="Self.FK_Videos_ToTable">
+            <End Role="Courses" EntitySet="Courses" />
+            <End Role="Videos" EntitySet="Videos" />
+          </AssociationSet>
+          <EntitySet Name="users" EntityType="DatabaseModel.users" />
+          <AssociationSet Name="FK_Appointment_ToTable" Association="DatabaseModel.FK_Appointment_ToTable">
+            <End Role="Kids" EntitySet="Kids" />
+            <End Role="Appointment" EntitySet="Appointment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Appointment_ToTable_1" Association="DatabaseModel.FK_Appointment_ToTable_1">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Appointment" EntitySet="Appointment" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prescriptions_ToTable" Association="DatabaseModel.FK_Prescriptions_ToTable">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Prescriptions" EntitySet="Prescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_ToTable" Association="DatabaseModel.FK_Sessions_ToTable">
+            <End Role="Doctor" EntitySet="Doctor" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Prescriptions_ToTable_1" Association="DatabaseModel.FK_Prescriptions_ToTable_1">
+            <End Role="Kids" EntitySet="Kids" />
+            <End Role="Prescriptions" EntitySet="Prescriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sessions_ToTable_1" Association="DatabaseModel.FK_Sessions_ToTable_1">
+            <End Role="Kids" EntitySet="Kids" />
+            <End Role="Sessions" EntitySet="Sessions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Accounts_ToTable1" Association="DatabaseModel.FK_Accounts_ToTable1">
+            <End Role="Posts" EntitySet="Posts" />
+            <End Role="users" EntitySet="users" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="U_ID" />
+          </Key>
+          <Property Name="U_ID" Type="Int32" Nullable="false" />
+          <Property Name="U_Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="U_DOB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="U_Gender" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="U_PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="U_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="U_Pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pos_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Posts" Relationship="DatabaseModel.FK_Accounts_ToTable1" FromRole="users" ToRole="Posts" />
+        </EntityType>
+        <Association Name="FK_Appointment_ToTable">
+          <End Type="DatabaseModel.Kids" Role="Kids" Multiplicity="1" />
+          <End Type="DatabaseModel.Appointment" Role="Appointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kids">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="Appointment">
+              <PropertyRef Name="K_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Appointment_ToTable_1">
+          <End Type="DatabaseModel.Doctor" Role="Doctor" Multiplicity="1" />
+          <End Type="DatabaseModel.Appointment" Role="Appointment" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="D_ID" />
+            </Principal>
+            <Dependent Role="Appointment">
+              <PropertyRef Name="D_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prescriptions_ToTable">
+          <End Type="DatabaseModel.Doctor" Role="Doctor" Multiplicity="1" />
+          <End Type="DatabaseModel.Prescriptions" Role="Prescriptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="D_ID" />
+            </Principal>
+            <Dependent Role="Prescriptions">
+              <PropertyRef Name="D_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_ToTable">
+          <End Type="DatabaseModel.Doctor" Role="Doctor" Multiplicity="1" />
+          <End Type="DatabaseModel.Sessions" Role="Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Doctor">
+              <PropertyRef Name="D_ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="D_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Prescriptions_ToTable_1">
+          <End Type="DatabaseModel.Kids" Role="Kids" Multiplicity="1" />
+          <End Type="DatabaseModel.Prescriptions" Role="Prescriptions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kids">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="Prescriptions">
+              <PropertyRef Name="K_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sessions_ToTable_1">
+          <End Type="DatabaseModel.Kids" Role="Kids" Multiplicity="1" />
+          <End Type="DatabaseModel.Sessions" Role="Sessions" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Kids">
+              <PropertyRef Name="K_ID" />
+            </Principal>
+            <Dependent Role="Sessions">
+              <PropertyRef Name="K_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Accounts_ToTable1">
+          <End Type="DatabaseModel.Posts" Role="Posts" Multiplicity="1" />
+          <End Type="DatabaseModel.users" Role="users" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Posts">
+              <PropertyRef Name="Pos_Id" />
+            </Principal>
+            <Dependent Role="users">
+              <PropertyRef Name="Pos_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities3">
+          <EntitySetMapping Name="Accounts">
+            <EntityTypeMapping TypeName="DatabaseModel.Accounts">
+              <MappingFragment StoreEntitySet="Accounts">
+                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
+                <ScalarProperty Name="U_Name" ColumnName="U_Name" />
+                <ScalarProperty Name="U_DOB" ColumnName="U_DOB" />
+                <ScalarProperty Name="U_Gender" ColumnName="U_Gender" />
+                <ScalarProperty Name="U_PhoneNumber" ColumnName="U_PhoneNumber" />
+                <ScalarProperty Name="U_Email" ColumnName="U_Email" />
+                <ScalarProperty Name="U_Pass" ColumnName="U_Pass" />
+                <ScalarProperty Name="Pos_Id" ColumnName="Pos_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Appointment">
+            <EntityTypeMapping TypeName="DatabaseModel.Appointment">
+              <MappingFragment StoreEntitySet="Appointment">
+                <ScalarProperty Name="D_ID" ColumnName="D_ID" />
+                <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+                <ScalarProperty Name="App_ID" ColumnName="App_ID" />
+                <ScalarProperty Name="App_Date" ColumnName="App_Date" />
+                <ScalarProperty Name="App_Time" ColumnName="App_Time" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Article">
+            <EntityTypeMapping TypeName="DatabaseModel.Article">
+              <MappingFragment StoreEntitySet="Article">
+                <ScalarProperty Name="Art_ID" ColumnName="Art_ID" />
+                <ScalarProperty Name="text" ColumnName="text" />
+                <ScalarProperty Name="Co_ID" ColumnName="Co_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Courses">
+            <EntityTypeMapping TypeName="DatabaseModel.Courses">
+              <MappingFragment StoreEntitySet="Courses">
+                <ScalarProperty Name="Co_ID" ColumnName="Co_ID" />
+                <ScalarProperty Name="Co_name" ColumnName="Co_name" />
+                <ScalarProperty Name="Co_description" ColumnName="Co_description" />
+                <ScalarProperty Name="Vid_ID" ColumnName="Vid_ID" />
+                <ScalarProperty Name="Art_ID" ColumnName="Art_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctor">
+            <EntityTypeMapping TypeName="DatabaseModel.Doctor">
+              <MappingFragment StoreEntitySet="Doctor">
+                <ScalarProperty Name="D_ID" ColumnName="D_ID" />
+                <ScalarProperty Name="D_Name" ColumnName="D_Name" />
+                <ScalarProperty Name="D_Gender" ColumnName="D_Gender" />
+                <ScalarProperty Name="D_national_id" ColumnName="D_national_id" />
+                <ScalarProperty Name="D_DOB" ColumnName="D_DOB" />
+                <ScalarProperty Name="D_Specialization" ColumnName="D_Specialization" />
+                <ScalarProperty Name="D_PhoneNumber" ColumnName="D_PhoneNumber" />
+                <ScalarProperty Name="D_Email" ColumnName="D_Email" />
+                <ScalarProperty Name="D_Pass" ColumnName="D_Pass" />
+                <ScalarProperty Name="D_Experiences" ColumnName="D_Experiences" />
+                <ScalarProperty Name="D_working_hours" ColumnName="D_working_hours" />
+                </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kids">
+            <EntityTypeMapping TypeName="DatabaseModel.Kids">
+              <MappingFragment StoreEntitySet="Kids">
+                <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+                <ScalarProperty Name="K_Name" ColumnName="K_Name" />
+                <ScalarProperty Name="K_Gender" ColumnName="K_Gender" />
+                <ScalarProperty Name="K_Address" ColumnName="K_Address" />
+                <ScalarProperty Name="K_DOB" ColumnName="K_DOB" />
+                <ScalarProperty Name="Medical_Conditions" ColumnName="Medical_Conditions" />
+                <ScalarProperty Name="Medecations" ColumnName="Medecations" />
+                <ScalarProperty Name="Chief_Complaint" ColumnName="Chief_Complaint" />
+                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
+                </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Posts">
+            <EntityTypeMapping TypeName="DatabaseModel.Posts">
+              <MappingFragment StoreEntitySet="Posts">
+                <ScalarProperty Name="Pos_Id" ColumnName="Pos_Id" />
+                <ScalarProperty Name="text" ColumnName="text" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Prescriptions">
+            <EntityTypeMapping TypeName="DatabaseModel.Prescriptions">
+              <MappingFragment StoreEntitySet="Prescriptions">
+                <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+                <ScalarProperty Name="D_ID" ColumnName="D_ID" />
+                <ScalarProperty Name="Pre_Id" ColumnName="Pre_Id" />
+                <ScalarProperty Name="Pre_date" ColumnName="Pre_date" />
+                <ScalarProperty Name="Pre_medical_diagnosis" ColumnName="Pre_medical_diagnosis" />
+                <ScalarProperty Name="Pre_pharmaceutical" ColumnName="Pre_pharmaceutical" />
+                <ScalarProperty Name="Pre_description" ColumnName="Pre_description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sessions">
+            <EntityTypeMapping TypeName="DatabaseModel.Sessions">
+              <MappingFragment StoreEntitySet="Sessions">
+                <ScalarProperty Name="K_ID" ColumnName="K_ID" />
+                <ScalarProperty Name="D_ID" ColumnName="D_ID" />
+                <ScalarProperty Name="Se_ID" ColumnName="Se_ID" />
+                <ScalarProperty Name="Se_date" ColumnName="Se_date" />
+                <ScalarProperty Name="Se_medical_diagnosis" ColumnName="Se_medical_diagnosis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Videos">
+            <EntityTypeMapping TypeName="DatabaseModel.Videos">
+              <MappingFragment StoreEntitySet="Videos">
+                <ScalarProperty Name="Vid_ID" ColumnName="Vid_ID" />
+                <ScalarProperty Name="Vid_URL" ColumnName="Vid_URL" />
+                <ScalarProperty Name="Vid_Description" ColumnName="Vid_Description" />
+                <ScalarProperty Name="Co_ID" ColumnName="Co_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="DatabaseModel.users">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="Pos_Id" ColumnName="Pos_Id" />
+                <ScalarProperty Name="U_Pass" ColumnName="U_Pass" />
+                <ScalarProperty Name="U_Email" ColumnName="U_Email" />
+                <ScalarProperty Name="U_PhoneNumber" ColumnName="U_PhoneNumber" />
+                <ScalarProperty Name="U_Gender" ColumnName="U_Gender" />
+                <ScalarProperty Name="U_DOB" ColumnName="U_DOB" />
+                <ScalarProperty Name="U_Name" ColumnName="U_Name" />
+                <ScalarProperty Name="U_ID" ColumnName="U_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

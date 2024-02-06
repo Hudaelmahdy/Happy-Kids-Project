@@ -7,7 +7,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
 using System;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
@@ -36,4 +35,3 @@ public partial class DatabaseEntities3 : DbContext
     public virtual DbSet<Videos> Videos { get; set; }
     public virtual DbSet<users> users { get; set; }
 }
-

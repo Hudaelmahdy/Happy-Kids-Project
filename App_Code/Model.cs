@@ -218,4 +218,3 @@ public partial class Videos
     public virtual ICollection<Courses> Courses { get; set; }
     public virtual Courses Courses1 { get; set; }
 }
-

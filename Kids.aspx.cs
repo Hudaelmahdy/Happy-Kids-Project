@@ -5,10 +5,21 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class Doctors :  System.Web.UI.Page
+public partial class Kids : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        btnSubmit.Click += btnSubmit_Click;
+    }
+
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
 
     }
+
+    protected void btnK_Back_Click(object sender, EventArgs e)
+    {
+
+    }
+
 }

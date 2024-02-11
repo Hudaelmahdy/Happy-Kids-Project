@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Appointment.aspx.cs" CodeBehind="~/Appointment.aspx.cs" Inherits="Appointment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Kids.aspx.cs" CodeBehind="~/Kids.aspx.cs" Inherits="Kids" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,7 +69,7 @@
                     </div> -->
                     <a href="contact.html" class="nav-item nav-link"></a>
                 </div>
-                <asp:Button ID="btnBack" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClick="btnBack_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>
+                <asp:Button ID="btnK_Back" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClientClick="btnK_Back_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -124,7 +124,7 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <asp:Button ID="btnKSubmit" class="btn btn-primary w-100 py-3" runat="server" Text="Submit" OnClick="btnKSubmit_Click" />
+                                            <asp:Button ID="btnSubmit" class="btn btn-primary w-100 py-3" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
                                         </div>
 
                                     </div>

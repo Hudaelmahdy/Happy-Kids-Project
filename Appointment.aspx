@@ -1,7 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Appointment.aspx.cs"  Inherits="Appointment" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Appointment.aspx.cs" CodeBehind="~/Appointment.aspx.cs" Inherits="Appointment" %>
+
 <!DOCTYPE html>
 <html lang="en">
-    
+
 <head>
     <meta charset="utf-8">
     <title>Happy Kids</title>
@@ -57,7 +58,7 @@
                     <a href="about.html" class="nav-item nav-link"></a>
                     <a href="classes.html" class="nav-item nav-link"></a>
                     <a href="classes.html" class="nav-item nav-link"></a>
-                   <!-- <div class="nav-item dropdown">
+                    <!-- <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                             <a href="facility.html" class="dropdown-item">Anxiety Disorder</a>
@@ -68,7 +69,7 @@
                     </div> -->
                     <a href="contact.html" class="nav-item nav-link"></a>
                 </div>
-                    <asp:Button ID="btnBack" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClick="btnBack_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>
+                <asp:Button ID="btnBack" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClick="btnBack_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>
             </div>
         </nav>
         <!-- Navbar End -->
@@ -95,9 +96,9 @@
                                     <div class="row g-3">
 
                                         <div class="col-sm-15">
-                                                <asp:TextBox ID="txtK_Name" runat="server" class="form-control border-0" placeholder="Child Name"></asp:TextBox>
+                                            <asp:TextBox ID="txtK_Name" runat="server" class="form-control border-0" placeholder="Child Name"></asp:TextBox>
                                         </div>
-                                        
+
                                         <div class="col-sm-15">
                                             <asp:TextBox ID="txtK_Age" runat="server" class="form-control border-0" placeholder="Child Age"></asp:TextBox>
                                         </div>
@@ -123,7 +124,7 @@
                                         </div>
 
                                         <div class="col-12">
-                                            <asp:Button ID="btnSubmit" class="btn btn-primary w-100 py-3" runat="server" Text="Submit" OnClick="btnSubmit_Click" />
+                                            <asp:Button ID="btnApp_Submit" class="btn btn-primary w-100 py-3" runat="server" Text="Submit" OnClientClick="btnApp_Submit_Click" />
                                         </div>
 
                                     </div>
@@ -144,31 +145,31 @@
 
         <!-- Classes Start -->
         <!-- Classes End -->
-            <!-- Team Start -->
-            <!-- Team End -->
-            <!-- Testimonial Start -->
-            <!-- Testimonial End -->
-            <!-- Footer Start -->
-            <!-- Footer End -->
+        <!-- Team Start -->
+        <!-- Team End -->
+        <!-- Testimonial Start -->
+        <!-- Testimonial End -->
+        <!-- Footer Start -->
+        <!-- Footer End -->
 
 
-            <!-- Back to Top -->
-            <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-        </div>
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
 
-        <!-- JavaScript Libraries -->
-        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="lib/wow/wow.min.js"></script>
-        <script src="lib/easing/easing.min.js"></script>
-        <script src="lib/waypoints/waypoints.min.js"></script>
-        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
 
-        <!-- Template Javascript -->
-        <script src="js/main.js"></script>
-        <p>
-            &nbsp;&nbsp;&nbsp;
-        </p>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <p>
+        &nbsp;&nbsp;&nbsp;
+    </p>
 
 </body>
 

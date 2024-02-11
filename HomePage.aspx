@@ -56,9 +56,9 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto">
                 <a href="HomePage.aspx" class="nav-item nav-link active">Home</a>
-                <a href="AboutUs.aspx" class="nav-item nav-link">About Us</a>
                 <a href="Doctors.aspx" class="nav-item nav-link">Doctors</a>
-                <a href="Society.aspx" class="nav-item nav-link">Society</a>
+                <a href="Activities.aspx" class="nav-item nav-link">Activities</a>
+
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
                     <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
@@ -68,9 +68,15 @@
                         <a href="AutismSpectrum.aspx" class="dropdown-item">Autism Spectrum</a>
                     </div>
                 </div>
-                <a href="ContactUs.aspx" class="nav-item nav-link">Contact Us</a>
+
             </div>
-            <a href="RegistrationPage.aspx" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us</a>
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Register</a>
+                <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                    <a href="AnxietyDisoroder.aspx" class="dropdown-item">User</a>
+                    <a href="Depression.aspx" class="dropdown-item">Doctor</a>
+                </div>
+            </div>
             <a href="Appointment.aspx" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" style="margin-left: 10px;">Make Appointment</a>
         </div>
     </nav>

@@ -58,26 +58,23 @@
                 <a href="HomePage.aspx" class="nav-item nav-link active">Home</a>
                 <a href="Doctors.aspx" class="nav-item nav-link">Doctors</a>
                 <a href="Activities.aspx" class="nav-item nav-link">Activities</a>
+                <a href="Activities.aspx" class="nav-item nav-link">Courses</a>
 
-                <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
-                    <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                        <a href="AnxietyDisoroder.aspx" class="dropdown-item">Anxiety Disorder</a>
-                        <a href="ADHD.aspx" class="dropdown-item">ADHD</a>
-                        <a href="Depression.aspx" class="dropdown-item">Depression</a>
-                        <a href="AutismSpectrum.aspx" class="dropdown-item">Autism Spectrum</a>
-                    </div>
-                </div>
 
             </div>
-            <div class="nav-item dropdown">
-                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Register</a>
+            <div class="navbar-nav mx-auto">
+                <a href="HomePage.aspx" class="nav-item nav-link">Login</a>
+
+                <div class="nav-item dropdown">
+                <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Register</a>
                 <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
                     <a href="AnxietyDisoroder.aspx" class="dropdown-item">User</a>
                     <a href="Depression.aspx" class="dropdown-item">Doctor</a>
                 </div>
             </div>
-            <a href="Appointment.aspx" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" style="margin-left: 10px;">Make Appointment</a>
+                <a href="HomePage.aspx" class="nav-item nav-link">Make Appointment</a>
+
+            </div>
         </div>
     </nav>
     <!-- Navbar End -->
@@ -131,7 +128,6 @@
                     <div class="facility-item">
                         <div class="facility-text bg-primary">
                             <h3 class="text-primary mb-3">Anxiety Disorder</h3>
-                            <p class="mb-0">Excessive worry, fear disrupting daily life, impacting social, academic, and personal well-being for kids.</p>
                         </div>
                     </div>
                 </div>
@@ -139,7 +135,6 @@
                     <div class="facility-item">
                         <div class="facility-text bg-success">
                             <h3 class="text-success mb-3">ADHD</h3>
-                            <p class="mb-0">It Involves challenges with attention, hyperactivity, and impulsivity, impacting daily activities and interactions for children.</p>
                         </div>
                     </div>
                 </div>
@@ -147,7 +142,6 @@
                     <div class="facility-item">
                         <div class="facility-text bg-warning">
                             <h3 class="text-warning mb-3">Depression</h3>
-                            <p class="mb-0">It is related to persistent sadness, decreased energy, and impact on sleep, appetite and general emotional health in young people.</p>
                         </div>
                     </div>
                 </div>
@@ -155,7 +149,6 @@
                     <div class="facility-item">
                         <div class="facility-text bg-info">
                             <h3 class="text-info mb-3">Autism Spectrum</h3>
-                            <p class="mb-0">Difficulty in socializing and communicating for kids, but they also have unique strengths and traits.</p>
                         </div>
                     </div>
                 </div>
@@ -200,12 +193,6 @@
                     </div>
                     <div>
                         <h6>- Parent-Child Bonding.</h6>
-                    </div>
-
-                    <div class="row g-4 align-items-center">
-                        <div class="col-sm-6">
-                            <a class="btn btn-primary rounded-pill py-3 px-5" href="Activities.aspx">Read More</a>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-6 about-img wow fadeInUp" data-wow-delay="0.5s">
@@ -319,49 +306,7 @@
 
 
         <!-- Testimonial Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">Our Clients Say!</h1>
-                    <p></p>
-                </div>
-                <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-1.jpg" style="width: 90px; height: 90px;">
-                            <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
-                            </div>
-                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-2.jpg" style="width: 90px; height: 90px;">
-                            <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
-                            </div>
-                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
-                        </div>
-                    </div>
-                    <div class="testimonial-item bg-light rounded p-5">
-                        <p class="fs-5">Tempor stet labore dolor clita stet diam amet ipsum dolor duo ipsum rebum stet dolor amet diam stet. Est stet ea lorem amet est kasd kasd erat eos</p>
-                        <div class="d-flex align-items-center bg-white me-n5" style="border-radius: 50px 0 0 50px;">
-                            <img class="img-fluid flex-shrink-0 rounded-circle" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
-                            <div class="ps-3">
-                                <h3 class="mb-1">Client Name</h3>
-                                <span>Profession</span>
-                            </div>
-                            <i class="fa fa-quote-right fa-3x text-primary ms-auto d-none d-sm-flex"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
         <!-- Testimonial End -->
 
 

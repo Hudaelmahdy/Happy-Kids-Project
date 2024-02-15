@@ -25,6 +25,10 @@
           <Property Name="App_ID" Type="int" Nullable="false" />
           <Property Name="App_Date" Type="date" Nullable="false" />
           <Property Name="App_Time" Type="time" Precision="7" Nullable="false" />
+          <Property Name="kid_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="kid_DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="p_name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="p_DOB" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="K_ID" Type="int" Nullable="false" />
           <Property Name="D_ID" Type="int" Nullable="false" />
         </EntityType>
@@ -116,7 +120,7 @@
           <Property Name="U_PhoneNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="U_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="U_Pass" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Pos_Id" Type="int" Nullable="false" />
+          <Property Name="Pos_Id" Type="int" />
         </EntityType>
         <EntityType Name="Videos">
           <Key>
@@ -128,7 +132,7 @@
           <Property Name="Co_ID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_Accounts_ToTable">
-          <End Role="Posts" Type="Self.Posts" Multiplicity="1" />
+          <End Role="Posts" Type="Self.Posts" Multiplicity="0..1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Posts">
@@ -362,6 +366,10 @@
           <Property Name="D_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Kids1" Relationship="DatabaseModel.FK_Appointment_ToTable" FromRole="Appointment" ToRole="Kids" />
           <NavigationProperty Name="Doctor1" Relationship="DatabaseModel.FK_Appointment_ToTable_1" FromRole="Appointment" ToRole="Doctor" />
+          <Property Name="kid_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kid_DOB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="p_name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="p_DOB" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Article">
           <Key>
@@ -618,7 +626,7 @@
           <Property Name="U_PhoneNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="U_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="U_Pass" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Pos_Id" Type="Int32" Nullable="false" />
+          <Property Name="Pos_Id" Type="Int32" />
           <NavigationProperty Name="Posts" Relationship="DatabaseModel.FK_Accounts_ToTable1" FromRole="users" ToRole="Posts" />
         </EntityType>
         <Association Name="FK_Appointment_ToTable">
@@ -728,6 +736,10 @@
           <EntitySetMapping Name="Appointment">
             <EntityTypeMapping TypeName="DatabaseModel.Appointment">
               <MappingFragment StoreEntitySet="Appointment">
+                <ScalarProperty Name="p_DOB" ColumnName="p_DOB" />
+                <ScalarProperty Name="p_name" ColumnName="p_name" />
+                <ScalarProperty Name="kid_DOB" ColumnName="kid_DOB" />
+                <ScalarProperty Name="kid_name" ColumnName="kid_name" />
                 <ScalarProperty Name="D_ID" ColumnName="D_ID" />
                 <ScalarProperty Name="K_ID" ColumnName="K_ID" />
                 <ScalarProperty Name="App_ID" ColumnName="App_ID" />
@@ -859,7 +871,7 @@
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
-        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>

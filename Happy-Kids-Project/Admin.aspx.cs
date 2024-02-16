@@ -11,4 +11,8 @@ public partial class Admin : System.Web.UI.Page
     {
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> Sprint1

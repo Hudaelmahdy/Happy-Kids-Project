@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿// T4 code generation is enabled for model 'C:\Users\DoDo\Documents\My Web Sites\Happy-Kids-Project\Happy-Kids-Project\App_Code\Model.edmx'. 
+=======
+﻿// T4 code generation is enabled for model 'C:\Users\Noura\OneDrive\Documents\My Web Sites\Happy-Kids-Project\Happy-Kids-Project\App_Code\Model.edmx'. 
+>>>>>>> Sprint1
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

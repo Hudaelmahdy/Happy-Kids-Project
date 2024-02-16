@@ -53,28 +53,40 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="index.html" class="nav-item nav-link active"></a>
-                    <a href="about.html" class="nav-item nav-link"></a>
-                    <a href="classes.html" class="nav-item nav-link"></a>
-                    <a href="classes.html" class="nav-item nav-link"></a>
+                    <a href="Doctors.aspx" class="nav-item nav-link">Doctors</a>
+                    <a href="Activities.aspx" class="nav-item nav-link">Activities</a>
+
                     <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item"></a>
-                            <a href="team.html" class="dropdown-item"></a>
-                            <a href="call-to-action.html" class="dropdown-item"></a>
-                            <a href="appointment.html" class="dropdown-item"></a>
+                            <a href="AnxietyDisoroder.aspx" class="dropdown-item">Anxiety Disorder</a>
+                            <a href="ADHD.aspx" class="dropdown-item">ADHD</a>
+                            <a href="Depression.aspx" class="dropdown-item">Depression</a>
+                            <a href="AutismSpectrum.aspx" class="dropdown-item">Autism Spectrum</a>
                         </div>
                     </div>
-                    <a href="contact.html" class="nav-item nav-link"></a>
+
                 </div>
-                
+                <a href="Appointment.aspx" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" style="margin-left: 10px;">Make Appointment</a>
             </div>
         </nav>
         <!-- Navbar End -->
 
 
         <!-- Carousel Start -->
-        
+        <div class="container-fluid p-0 mb-5">
+            <div class="owl-carousel header-carousel position-relative">
+                <div class="owl-carousel-item position-relative">
+                    <img class="img-fluid" src="img/Welcom.jpg" alt="">
+                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
+                        <div class="container">
+                            <div class="row justify-content-start">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Carousel End -->
 
 
@@ -277,7 +289,7 @@
 
 
             <!-- Testimonial Start -->
-            <div class="container-xxl py-5">
+<!--            <div class="container-xxl py-5">
                 <div class="container">
                     <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                         <h1 class="mb-3">Our Clients Say!</h1>
@@ -319,11 +331,29 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>          -->
             <!-- Testimonial End -->
 
 
             <!-- Footer Start -->
+
+            <div class="container-fluid bg-dark text-white-50 footer pt-3 mt-5 wow fadeIn" data-wow-delay="0.1s" style="height: 300px;">
+                <div class="container py-5">
+                        <div class="col-lg-3 col-md-6">
+                            <h3 class="text-white mb-4">Get In Touch</h3>
+                            <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                            <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                            <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                            <div class="d-flex pt-2">
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                                <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                </div>
+             </div>
+
             
                                 
             <!-- Footer End -->

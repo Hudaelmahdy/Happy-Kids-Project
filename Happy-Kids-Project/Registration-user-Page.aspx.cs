@@ -4,10 +4,18 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using DatabaseModel;
+
+
+
+
+
+
 
 public partial class RegistrationPage : Page
 {
-    DatabaseEntities3 db =new DatabaseEntities3();
+    DatabaseEntities4 db =new DatabaseEntities4();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -29,7 +37,7 @@ public partial class RegistrationPage : Page
 
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
-        users S = new users()
+        users S = new  users()
         {
             U_ID = Convert.ToInt16(txtU_ID.Text),
             U_Name = txtF_Name.Text,

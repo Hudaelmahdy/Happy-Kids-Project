@@ -4,31 +4,26 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="1e270d0f63f349049f4601223df1bc30" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="DatabaseModel.Accounts" Width="1.5" PointX="7" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Appointment" Width="1.5" PointX="4.125" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Article" Width="1.5" PointX="8.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Courses" Width="1.5" PointX="11" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Doctor" Width="1.5" PointX="0.875" PointY="2.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Kids" Width="1.5" PointX="6.875" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Posts" Width="1.5" PointX="1.375" PointY="11.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Prescriptions" Width="1.5" PointX="3.375" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Sessions" Width="1.5" PointX="1.5" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DatabaseModel.Videos" Width="1.5" PointX="13.25" PointY="1.25" IsExpanded="true" />
-        <AssociationConnector Association="DatabaseModel.FK_Accounts_ToTable" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK_Kids_ToTable" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK_Article_ToTable" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK_Courses_ToTable_1" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK_Courses_ToTable" ManuallyRouted="false" />
-        <AssociationConnector Association="DatabaseModel.FK_Videos_ToTable" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="DatabaseModel.users" Width="1.5" PointX="3.625" PointY="12.625" />
-        <AssociationConnector Association="DatabaseModel.FK_Appointment_ToTable" />
-        <AssociationConnector Association="DatabaseModel.FK_Appointment_ToTable_1" />
-        <AssociationConnector Association="DatabaseModel.FK_Prescriptions_ToTable" />
-        <AssociationConnector Association="DatabaseModel.FK_Sessions_ToTable" />
-        <AssociationConnector Association="DatabaseModel.FK_Prescriptions_ToTable_1" />
-        <AssociationConnector Association="DatabaseModel.FK_Sessions_ToTable_1" />
-        <AssociationConnector Association="DatabaseModel.FK_Accounts_ToTable1" />
+      <Diagram DiagramId="44fd0f27f4734b629825ce1637d9250e" Name="Diagram1" ZoomLevel="60">
+        <EntityTypeShape EntityType="DatabaseModel.Appointment" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Comment" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Cours" Width="1.5" PointX="5.875" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Doctor" Width="1.5" PointX="3" PointY="15.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Kid" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Session" Width="1.5" PointX="8.25" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Test" Width="1.5" PointX="3" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.user" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatabaseModel.Video" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <AssociationConnector Association="DatabaseModel.FK_Appointment_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Appointment_Kids" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Comments_users" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Comments_Videos" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Courses_Videos" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Videos_Courses" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Table_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Kids_users" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Sessions_Kids" ManuallyRouted="false" />
+        <AssociationConnector Association="DatabaseModel.FK_Tests_users" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -59,7 +59,7 @@ public partial class RegistrationPage : Page
     {
         users S = new  users()
         {
-            U_ID = Convert.ToInt16(txtU_ID.Text),
+            U_ID =(txtU_ID.Text),
             U_Name = txtF_Name.Text,
             U_DOB = txtU_DOB.Text,
             U_Email = txtU_Email.Text,

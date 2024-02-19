@@ -34,7 +34,27 @@ public partial class RegistrationPage : Page
         }
 
     }
+    public class users
+    {
+        public string U_ID { get; set; }
+        public string U_Email { get; set; }
+        public  string U_PhoneNumber { get; set; }
+        public string U_Pass { get; set; }
+        public string U_Name { get; set; }
+        public string U_DOB { get; set; }
 
+
+
+
+        public void Login()
+        {
+        }
+
+        public void ChangePassword(string newPassword)
+        {
+            // تغيير كلمة المرور
+        }
+    }
     protected void btnSignUp_Click(object sender, EventArgs e)
     {
         users S = new  users()

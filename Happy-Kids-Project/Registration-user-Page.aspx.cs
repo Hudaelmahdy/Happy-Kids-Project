@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 public partial class RegistrationPage : Page
 {
-    DatabaseEntities3 db=new DatabaseEntities3();
+    DatabaseEntities3 db =new DatabaseEntities3();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)

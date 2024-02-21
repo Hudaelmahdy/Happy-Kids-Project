@@ -91,7 +91,7 @@
         <img class="img-fluid rounded-circle" src="img/25.jpg" alt="">
     </div>
     
-        <a class="d-block text-center h3 mt-3 mb-4" href="Intelligence.aspx">Autism Spectrum</a>
+        <a class="d-block text-center h3 mt-3 mb-4" href="AutismSpectrum.aspx">Autism Spectrum</a>
    
 </div>
         </div>
@@ -111,7 +111,7 @@
                     <img class="img-fluid rounded-circle" src="img/27.jpg" alt="">
                 </div>
                 
-                    <a class="d-block text-center h3 mt-3 mb-4" href="">Depression</a>
+                    <a class="d-block text-center h3 mt-3 mb-4" href="Depression.aspx">Depression</a>
                 
             </div>
         </div>

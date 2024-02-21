@@ -55,15 +55,8 @@
                 <div class="navbar-nav mx-auto">
                     <a href="Doctors.aspx" class="nav-item nav-link">Doctors</a>
                     <a href="Activities.aspx" class="nav-item nav-link">Activities</a>
+                    <a href="Courses.aspx" class="nav-item nav-link">Courses</a>
 
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="AnxietyDisoroder.aspx" class="dropdown-item">Anxiety Disorder</a>
-                            <a href="ADHD.aspx" class="dropdown-item">ADHD</a>
-                            <a href="Depression.aspx" class="dropdown-item">Depression</a>
-                            <a href="AutismSpectrum.aspx" class="dropdown-item">Autism Spectrum</a>
-                        </div>
                     </div>
 
                 </div>
@@ -77,7 +70,7 @@
         <div class="container-fluid p-0 mb-5">
             <div class="owl-carousel header-carousel position-relative">
                 <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="img/Welcom.jpg" alt="">
+                    <img class="img-fluid" src="img/Welcome-Pic (1).jpg" alt="">
                     <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
                         <div class="container">
                             <div class="row justify-content-start">

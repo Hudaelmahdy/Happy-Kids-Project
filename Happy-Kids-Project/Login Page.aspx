@@ -1,10 +1,11 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login Page.aspx.cs" Inherits="Login_Page" %>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Kider - Preschool Website Template</title>
+    <title>Happy kids - Preschool Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -34,40 +35,65 @@
 
 
 
-<div class="container-xxl py-5">
-    <div class="container">
-        <div class="bg-light rounded">
-            <div class="row g-0">
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="h-100 d-flex flex-column justify-content-center p-5 text-center"> <!-- Added text-center class -->
-                        <h1 class="mb-4">Login to Your Account</h1> <!-- Corrected the spelling error -->
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control border-0 Username" id="Username" placeholder="Username" style="width: 350px">
-                                        <label for="email">Username</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="password" class="form-control border-0 Password" id="Password" placeholder="Password" style="width: 350px">
-                                        <label for="password">Password</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <a href="" class="btn btn-primary rounded-pill px-3" style="margin-left: 20px;" type="submit">Login</a>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute w-100 h-100 rounded" src="img/7.jpg" style="object-fit: cover;">
-                    </div>
-                </div>
-            </div>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px #ff6a00;
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ff6a00;
+            border-radius: 4px;
+        }
+        .login-button {
+            background: linear-gradient(#030f3d,#ff6a00);
+            color:#f5f5f5;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer ;
+            width: 100%;
+        }
+        .signup-link {
+            font-size: 14px;
+            color:#000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Welcome</h1>
+        <input type="email" class="input-field" placeholder="Email">
+        <input type="password" class="input-field" placeholder="Password">
+
+        <button class="login-button"> <a href="UserPage.aspx"</a>LOGIN</button>
+
+        <a href="Registration-user-Page.aspx">Don't have an account? Sign up</a>
     </div>
-</div>
+</body>
+</html>

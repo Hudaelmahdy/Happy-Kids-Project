@@ -143,14 +143,7 @@
         </div>
         <!-- Appointment End -->
 
-        <!-- Classes Start -->
-        <!-- Classes End -->
-        <!-- Team Start -->
-        <!-- Team End -->
-        <!-- Testimonial Start -->
-        <!-- Testimonial End -->
-        <!-- Footer Start -->
-        <!-- Footer End -->
+        
 
 
         <!-- Back to Top -->

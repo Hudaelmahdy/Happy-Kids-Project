@@ -58,12 +58,12 @@
                 <a href="HomePage.aspx" class="nav-item nav-link active">Home</a>
                 <a href="Doctors.aspx" class="nav-item nav-link">Doctors</a>
                 <a href="Activities.aspx" class="nav-item nav-link">Activities</a>
-                <a href="Activities.aspx" class="nav-item nav-link">Courses</a>
+                <a href="Courses.aspx" class="nav-item nav-link">Courses</a>
 
 
             </div>
             <div class="navbar-nav mx-auto">
-                <a href="HomePage.aspx" class="nav-item nav-link">Login</a>
+                <a href="Login Page.aspx" class="nav-item nav-link">Login</a>
 
                 <div class="nav-item dropdown">
                 <a href="#" class="nav-link active dropdown-toggle" data-bs-toggle="dropdown">Register</a>

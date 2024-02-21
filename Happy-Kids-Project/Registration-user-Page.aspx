@@ -35,7 +35,7 @@
 
 
 <!-- Navbar Start -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
+    <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
     <a href="HomePage.aspx" class="navbar-brand">
         <h1 class="m-0 text-primary"><i class="fas fa-child me-3"></i>Happy Kids</h1>
     </a>
@@ -49,19 +49,22 @@
             <a href="classes.html" class="nav-item nav-link"></a>
             <a href="classes.html" class="nav-item nav-link"></a>
             <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Anxiety Disorder</a>
-                            <a href="team.html" class="dropdown-item">ADHD</a>
-                            <a href="call-to-action.html" class="dropdown-item">Depression</a>
-                            <a href="appointment.html" class="dropdown-item">Autism Spectrum</a>
-                        </div>
-                    </div> -->
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
+                <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
+                    <a href="facility.html" class="dropdown-item">Anxiety Disorder</a>
+                    <a href="team.html" class="dropdown-item">ADHD</a>
+                    <a href="call-to-action.html" class="dropdown-item">Depression</a>
+                    <a href="appointment.html" class="dropdown-item">Autism Spectrum</a>
+                </div>
+            </div> -->
             <a href="contact.html" class="nav-item nav-link"></a>
         </div>
-<%--        <asp:Button ID="btnBack" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClick="btnBack_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>--%>
+        
     </div>
 </nav>
+    
+
+
 <!-- Navbar End -->
 
 
@@ -118,6 +121,7 @@
 
                             <div class="col-12">
                                 <asp:Button ID="btnSignUp" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" style="margin-left: 85px;" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" PostBackUrl="~/"></asp:Button>
+                                <a href="HomePage.aspx"</a>
 
                             </div>
                             

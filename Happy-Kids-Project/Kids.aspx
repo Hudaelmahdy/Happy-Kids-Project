@@ -58,15 +58,7 @@
                     <a href="about.html" class="nav-item nav-link"></a>
                     <a href="classes.html" class="nav-item nav-link"></a>
                     <a href="classes.html" class="nav-item nav-link"></a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Anxiety Disorder</a>
-                            <a href="team.html" class="dropdown-item">ADHD</a>
-                            <a href="call-to-action.html" class="dropdown-item">Depression</a>
-                            <a href="appointment.html" class="dropdown-item">Autism Spectrum</a>
-                        </div>
-                    </div> -->
+                     <form runat="server">
                     <a href="contact.html" class="nav-item nav-link"></a>
                 </div>
                 <asp:Button ID="btnK_Back" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClientClick="btnK_Back_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>
@@ -91,8 +83,6 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4" style="margin-left: 82px; text-align: center;">Register your child's data</h1>
-
-                                <form>
                                     <div class="row g-3">
 
                                         <div class="col-sm-15">
@@ -135,7 +125,9 @@
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
                             <div class="position-relative h-100">
                                 <img class="position-absolute w-100 h-100 rounded" src="img/6.jpg" style="object-fit: cover;">
+                                </from>
                             </div>
+
                         </div>
                     </div>
                 </div>

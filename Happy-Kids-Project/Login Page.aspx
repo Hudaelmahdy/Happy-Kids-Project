@@ -32,11 +32,13 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 </head>
-
-
+     
 
 <!DOCTYPE html>
 <html lang="en">
+
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,6 +88,7 @@
     </style>
 </head>
 <body>
+
     <div class="login-container">
         <h1>Welcome</h1>
         <input type="email" class="input-field" placeholder="Email">

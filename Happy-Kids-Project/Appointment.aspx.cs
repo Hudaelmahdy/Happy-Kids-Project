@@ -22,4 +22,14 @@ public partial class Appointment : Page
     }
 
 
+
+    protected void txtK_Name_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void txtU_Age_TextChanged(object sender, EventArgs e)
+    {
+
+    }
 }

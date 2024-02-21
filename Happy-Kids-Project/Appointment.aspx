@@ -45,6 +45,7 @@
 
 
         <!-- Navbar Start -->
+          
         <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
             <a href="HomePage.aspx" class="navbar-brand">
                 <h1 class="m-0 text-primary"><i class="fas fa-child me-3"></i>Happy Kids</h1>
@@ -58,51 +59,35 @@
                     <a href="about.html" class="nav-item nav-link"></a>
                     <a href="classes.html" class="nav-item nav-link"></a>
                     <a href="classes.html" class="nav-item nav-link"></a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Courses</a>
-                        <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.html" class="dropdown-item">Anxiety Disorder</a>
-                            <a href="team.html" class="dropdown-item">ADHD</a>
-                            <a href="call-to-action.html" class="dropdown-item">Depression</a>
-                            <a href="appointment.html" class="dropdown-item">Autism Spectrum</a>
-                        </div>
-                    </div> -->
+  
                     <a href="contact.html" class="nav-item nav-link"></a>
                 </div>
-                <asp:Button ID="btnBack" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" runat="server" Text="Home" OnClick="btnBack_Click" PostBackUrl="~/HomePage.aspx"></asp:Button>
+                                <form runat="server">
+
+                
+                    
             </div>
         </nav>
         <!-- Navbar End -->
-        <!-- Carousel Start -->
-        <!-- Carousel End -->
-        <!-- Facilities Start -->
-        <!-- Facilities End -->
-        <!-- About Start -->
-        <!-- About End -->
-        <!-- Call To Action Start -->
-        <!-- Call To Action End -->
+        
 
 
         <!-- Appointment Start -->
         <div class="container-xxl py-5">
-            <div class="container">
+            <div class=" justify-content-center">
                 <div class="bg-light rounded">
                     <div class="row g-0">
                         <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                             <div class="h-100 d-flex flex-column justify-content-center p-5">
                                 <h1 class="mb-4" style="margin-left: 82px;">Make Appointment</h1>
 
-                                <form>
                                     <div class="row g-3">
-
                                         <div class="col-sm-15">
                                             <asp:TextBox ID="txtK_Name" runat="server" class="form-control border-0" placeholder="Child Name"></asp:TextBox>
                                         </div>
-
                                         <div class="col-sm-15">
                                             <asp:TextBox ID="txtK_Age" runat="server" class="form-control border-0" placeholder="Child Age"></asp:TextBox>
                                         </div>
-
                                         <div class="col-sm-15">
                                             <asp:TextBox ID="txtK_Gender" runat="server" class="form-control border-0" placeholder="Child Gender"></asp:TextBox>
                                         </div>
@@ -112,7 +97,7 @@
                                         </div>
 
                                         <div class="col-sm-15">
-                                            <asp:TextBox ID="txtU_Age" runat="server" class="form-control border-0" placeholder="Parent Age"></asp:TextBox>
+                                            <asp:TextBox ID="txtU_Age" runat="server" class="form-control border-0" placeholder="Phone Number" OnTextChanged="txtU_Age_TextChanged"></asp:TextBox>
                                         </div>
 
                                         <div class="col-sm-15">
@@ -125,31 +110,22 @@
 
                                         <div class="col-12">
                                             <asp:Button ID="btnApp_Submit" class="btn btn-primary w-100 py-3" runat="server" Text="Submit" OnClientClick="btnApp_Submit_Click" />
+
                                         </div>
 
+
+
                                     </div>
-                                </form>
+                                
 
                             </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="img/6.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+
+                                    
+                                 </form>
+
+                            
         <!-- Appointment End -->
-
-        
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-    </div>
-
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -160,10 +136,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <p>
-        &nbsp;&nbsp;&nbsp;
-    </p>
+    
 
-</body>
 
 </html>

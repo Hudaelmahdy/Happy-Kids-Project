@@ -72,7 +72,7 @@
                     <a href="Depression.aspx" class="dropdown-item">Doctor</a>
                 </div>
             </div>
-                <a href="HomePage.aspx" class="nav-item nav-link">Make Appointment</a>
+                <a href="Appointment.aspx" class="nav-item nav-link">Make Appointment</a>
 
             </div>
         </div>

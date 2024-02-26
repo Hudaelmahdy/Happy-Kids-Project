@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Activities.Statements;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
-using DatabaseModel;
+
 
 
 
@@ -15,7 +16,7 @@ using DatabaseModel;
 
 public partial class RegistrationPage : Page
 {
-    DatabaseEntities4 db =new DatabaseEntities4();
+    DatabaseEntities6 db =new DatabaseEntities6();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -37,11 +38,13 @@ public partial class RegistrationPage : Page
     public class users
     {
         public string U_ID { get; set; }
-        public string U_Email { get; set; }
-        public  string U_PhoneNumber { get; set; }
-        public string U_Pass { get; set; }
-        public string U_Name { get; set; }
-        public string U_DOB { get; set; }
+        public string F_name { get; set; }
+        public string L_name { get; set; }
+        public string Email { get; set; }
+        public string Phone_Num { get; set; }
+        public string Password { get; set; }
+        public string DOB { get; set; }
+        public string Gender { get; set; }
 
 
 
@@ -60,11 +63,15 @@ public partial class RegistrationPage : Page
         users S = new  users()
         {
             U_ID =(txtU_ID.Text),
-            U_Name = txtF_Name.Text,
-            U_DOB = txtU_DOB.Text,
-            U_Email = txtU_Email.Text,
-            U_PhoneNumber = txtU_Phone.Text,
-            U_Pass = txtU_Password.Text
+            F_name = txtF_Name.Text,
+            L_name = txtL_Name.Text,
+            Email = txtU_Email.Text,
+            Phone_Num = txtU_Phone.Text,
+            DOB= txtU_DOB.Text,
+            Gender= txtU_Gender.Text,
+            Password = txtU_Password.Text
+
+
         };
         Response.Redirect("~/UserPage.aspx");
     }

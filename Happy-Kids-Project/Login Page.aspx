@@ -91,12 +91,13 @@
 
     <div class="login-container">
         <h1>Welcome</h1>
-        <input type="email" class="input-field" placeholder="Email">
-        <input type="password" class="input-field" placeholder="Password">
-
-        <button class="login-button"> <a href="UserPage.aspx"</a>LOGIN</button>
+        <form runt="server">
+        <asp:TextBox ID="txtemail" runat="server" Class="input-field" Placeholder="Email" ></asp:TextBox>
+        <asp:TextBox ID="txtpass" runat="server"  Class="input-field" Placeholder="Password" ></asp:TextBox>
+        <button class="login-button"> <a href="UserPage.aspx"</a>LOGIN</button></asp:TextBox>
 
         <a href="Registration-user-Page.aspx">Don't have an account? Sign up</a>
+         </form>
     </div>
 </body>
 </html>

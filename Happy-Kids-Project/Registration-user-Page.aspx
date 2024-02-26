@@ -91,7 +91,7 @@
                             </div>
 
                             <div class="col-sm-15">
-                                <asp:TextBox ID="TextBox1" runat="server" class="form-control border-0" placeholder="Second Name"></asp:TextBox>
+                                <asp:TextBox ID="txtL_Name" runat="server" class="form-control border-0" placeholder="Last Name"></asp:TextBox>
                             </div>
 
 
@@ -121,7 +121,7 @@
 
                             <div class="col-12">
                                 <asp:Button ID="btnSignUp" class="btn btn-primary rounded-pill px-3 d-none d-lg-block" style="margin-left: 85px;" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" PostBackUrl="~/"></asp:Button>
-                                <a href="HomePage.aspx"</a>
+                                <a href="UserPage.aspx"</a>
 
                             </div>
                             

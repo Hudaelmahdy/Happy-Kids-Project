@@ -1,20 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Noura\\Happy-Kids-Project\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{B60E6263-BDDA-4B33-B404-8CF7603A8616}|http://localhost:54449|c:\\users\\noura\\happy-kids-project\\happy-kids-project\\login page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B60E6263-BDDA-4B33-B404-8CF7603A8616}|http://localhost:54449|solutionrelative:happy-kids-project\\login page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B60E6263-BDDA-4B33-B404-8CF7603A8616}|http://localhost:54449|c:\\users\\noura\\happy-kids-project\\happy-kids-project\\login page.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B60E6263-BDDA-4B33-B404-8CF7603A8616}|http://localhost:54449|solutionrelative:happy-kids-project\\login page.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B60E6263-BDDA-4B33-B404-8CF7603A8616}|http://localhost:54449|C:\\Users\\Noura\\Happy-Kids-Project\\happy-kids-project\\registration-user-page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
-      "RelativeMoniker": "D:0:0:{B60E6263-BDDA-4B33-B404-8CF7603A8616}|http://localhost:54449|solutionrelative:happy-kids-project\\registration-user-page.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -22,50 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login Page.aspx.cs",
-              "DocumentMoniker": "C:\\Users\\Noura\\Happy-Kids-Project\\Happy-Kids-Project\\Login Page.aspx.cs",
-              "RelativeDocumentMoniker": "Happy-Kids-Project\\Login Page.aspx.cs",
-              "ToolTip": "C:\\Users\\Noura\\Happy-Kids-Project\\Happy-Kids-Project\\Login Page.aspx.cs",
-              "RelativeToolTip": "Happy-Kids-Project\\Login Page.aspx.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-26T12:28:14.233Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Registration-user-Page.aspx",
-              "DocumentMoniker": "C:\\Users\\Noura\\Happy-Kids-Project\\Happy-Kids-Project\\Registration-user-Page.aspx",
-              "RelativeDocumentMoniker": "Happy-Kids-Project\\Registration-user-Page.aspx",
-              "ToolTip": "C:\\Users\\Noura\\Happy-Kids-Project\\Happy-Kids-Project\\Registration-user-Page.aspx",
-              "RelativeToolTip": "Happy-Kids-Project\\Registration-user-Page.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-02-26T12:20:40.354Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Login Page.aspx",
-              "DocumentMoniker": "C:\\Users\\Noura\\Happy-Kids-Project\\Happy-Kids-Project\\Login Page.aspx",
-              "RelativeDocumentMoniker": "Happy-Kids-Project\\Login Page.aspx",
-              "ToolTip": "C:\\Users\\Noura\\Happy-Kids-Project\\Happy-Kids-Project\\Login Page.aspx",
-              "RelativeToolTip": "Happy-Kids-Project\\Login Page.aspx",
-              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
-              "WhenOpened": "2024-02-26T12:17:45.957Z",
-              "EditorCaption": ""
             }
           ]
         }

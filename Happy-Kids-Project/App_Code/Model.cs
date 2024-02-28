@@ -142,7 +142,7 @@ public partial class user
     }
 
     public int U_ID { get; set; }
-    public string F_namre { get; set; }
+    public string F_name { get; set; }
     public string L_name { get; set; }
     public string DOB { get; set; }
     public string Gender { get; set; }

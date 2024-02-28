@@ -92,7 +92,7 @@
             <PropertyRef Name="U_ID" />
           </Key>
           <Property Name="U_ID" Type="int" Nullable="false" />
-          <Property Name="F_namre" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="F_name" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="L_name" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="DOB" Type="nchar" MaxLength="10" Nullable="false" />
           <Property Name="Gender" Type="nchar" MaxLength="10" Nullable="false" />
@@ -389,7 +389,7 @@
             <PropertyRef Name="U_ID" />
           </Key>
           <Property Name="U_ID" Type="Int32" Nullable="false" />
-          <Property Name="F_namre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="F_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="L_name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="DOB" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
@@ -535,7 +535,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DatabaseEntities6" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DatabaseEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Appointments" EntityType="Self.Appointment" />
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="Courses" EntityType="Self.Cours" />
@@ -591,7 +591,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities6">
+        <EntityContainerMapping StorageEntityContainer="DatabaseModelStoreContainer" CdmEntityContainer="DatabaseEntities">
           <EntitySetMapping Name="Appointments">
             <EntityTypeMapping TypeName="DatabaseModel.Appointment">
               <MappingFragment StoreEntitySet="Appointment">
@@ -685,7 +685,7 @@
             <EntityTypeMapping TypeName="DatabaseModel.user">
               <MappingFragment StoreEntitySet="users">
                 <ScalarProperty Name="U_ID" ColumnName="U_ID" />
-                <ScalarProperty Name="F_namre" ColumnName="F_namre" />
+                <ScalarProperty Name="F_name" ColumnName="F_name" />
                 <ScalarProperty Name="L_name" ColumnName="L_name" />
                 <ScalarProperty Name="DOB" ColumnName="DOB" />
                 <ScalarProperty Name="Gender" ColumnName="Gender" />
@@ -725,7 +725,6 @@
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
-        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->

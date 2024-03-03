@@ -144,7 +144,7 @@ public partial class user
     public int U_ID { get; set; }
     public string F_name { get; set; }
     public string L_name { get; set; }
-    public string DOB { get; set; }
+    public DateTime DOB { get; set; }
     public string Gender { get; set; }
     public string Phone_num { get; set; }
     public string Email { get; set; }
@@ -157,6 +157,11 @@ public partial class user
     public virtual ICollection<Kid> Kids { get; set; }
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<Test> Tests { get; set; }
+
+    public static implicit operator user(user v)
+    {
+        throw new NotImplementedException();
+    }
 }
 
 public partial class Video
